@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[SharepointIntensityLevels](
+	[NHI] [varchar](255) NULL,
+	[FullName] [varchar](255) NULL,
+	[IntensityLevel] [varchar](255) NULL,
+	[PracticeID] [int] NULL,
+	[Archived] [nvarchar](10) NULL,
+	[ModifiedDate] [datetime] NULL,
+	[ModifiedBy] [varchar](255) NULL
+) ON [PRIMARY]

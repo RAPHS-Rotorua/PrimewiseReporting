@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[FluVaccinations](
+	[PracticeID] [int] NULL,
+	[NHI] [varchar](255) NULL,
+	[IMMDate] [datetime] NULL,
+	[Code] [varchar](255) NULL,
+	[Status] [varchar](255) NULL,
+	[Status_Desc] [varchar](255) NULL,
+	[Outcome] [varchar](8) NULL,
+	[row_num] [bigint] NULL,
+	[Description] [varchar](1000) NULL
+) ON [PRIMARY]

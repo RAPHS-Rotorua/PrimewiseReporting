@@ -1,0 +1,22 @@
+﻿CREATE TABLE [dbo].[rpt_IMMS_ForDemo](
+	[PracticeID] [int] NULL,
+	[Practice] [varchar](100) NULL,
+	[NHI] [varchar](255) NULL,
+	[Date_of_Birth] [datetime] NULL,
+	[Scheduled_Age_6_Weeks] [int] NOT NULL,
+	[Age_8_Months] [datetime] NULL,
+	[Age_24_Months] [datetime] NULL,
+	[Scheduled_Age_Group] [varchar](17) NOT NULL,
+	[Scheduled_Vaccine_Age] [varchar](50) NULL,
+	[Due_Group] [varchar](18) NOT NULL,
+	[Scheduled_Vaccine] [varchar](50) NULL,
+	[Dose] [int] NULL,
+	[WhenIMM] [date] NULL,
+	[VaccineDose] [int] NULL,
+	[ImmunisationStatus] [nvarchar](255) NULL,
+	[VaccineOutcome] [nvarchar](255) NULL,
+	[Milestone_Age_8_Months] [int] NOT NULL,
+	[Numerator_8_Months] [int] NOT NULL,
+	[Milestone_Age_24_Months] [int] NOT NULL,
+	[Numerator_24_Months] [int] NOT NULL
+) ON [PRIMARY]

@@ -1,0 +1,2 @@
+﻿/****** Object:  User [HEALTHNET\PrimeWiseReporting - Analyse Data]    Script Date: 21/02/2025 12:41:52 pm ******/
+CREATE USER [HEALTHNET\PrimeWiseReporting - Analyse Data] FOR LOGIN [HEALTHNET\PrimeWiseReporting - Analyse Data]

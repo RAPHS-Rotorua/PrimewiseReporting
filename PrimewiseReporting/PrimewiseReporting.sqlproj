@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>PrimewiseReporting</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{544cb3f8-e258-452b-a0a9-db3b6c9df82f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>PrimewiseReporting</RootNamespace>
+    <AssemblyName>PrimewiseReporting</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Appointment_Measurement_Report_Data.sql" />
+    <Build Include="dbo\Tables\Calendar.sql" />
+    <Build Include="dbo\Tables\CX_Temp_Test.sql" />
+    <Build Include="dbo\Tables\Dar_Reporting_TempTest.sql" />
+    <Build Include="dbo\Tables\Dar_Reporting_TempTest_19May2017.sql" />
+    <Build Include="dbo\Tables\ED_Frequent_Flyer.sql" />
+    <Build Include="dbo\Tables\Ethnicity.sql" />
+    <Build Include="dbo\Tables\FluVaccinations.sql" />
+    <Build Include="dbo\Tables\FluVaccine_ReportList.sql" />
+    <Build Include="dbo\Tables\FundingPayment.sql" />
+    <Build Include="dbo\Tables\FundingPayments_Test.sql" />
+    <Build Include="dbo\Tables\FundingTotals.sql" />
+    <Build Include="dbo\Tables\FundingTotals_2.sql" />
+    <Build Include="dbo\Tables\FundingTotals_2_Jan2022.sql" />
+    <Build Include="dbo\Tables\FundingTotals_Test.sql" />
+    <Build Include="dbo\Tables\Funding_Summary.sql" />
+    <Build Include="dbo\Tables\IMMS_24Month_Summary.sql" />
+    <Build Include="dbo\Tables\IMMS_AIROnly_DemoSSRS.sql" />
+    <Build Include="dbo\Tables\IMMS_Childhood_Detail.sql" />
+    <Build Include="dbo\Tables\IMMS_Childhood_DueStatus.sql" />
+    <Build Include="dbo\Tables\IMMS_Schedule.sql" />
+    <Build Include="dbo\Tables\IMMS_Scheduled_Vaccines.sql" />
+    <Build Include="dbo\Tables\IMMS_Scheduled_Vaccines_24M_Qtr4.sql" />
+    <Build Include="dbo\Tables\LINC_Reporting_TempTest.sql" />
+    <Build Include="dbo\Tables\MonthList.sql" />
+    <Build Include="dbo\Tables\PalliativeCare.sql" />
+    <Build Include="dbo\Tables\Patient.sql" />
+    <Build Include="dbo\Tables\PaymentWorking_QuarterlyUnearnedAchieved.sql" />
+    <Build Include="dbo\Tables\POAC_ServiceDelivery.sql" />
+    <Build Include="dbo\Tables\POAC_ServiceDelivery_Daily.sql" />
+    <Build Include="dbo\Tables\Practice.sql" />
+    <Build Include="dbo\Tables\PRReportingTest_20230703.sql" />
+    <Build Include="dbo\Tables\ReportingDiseaseBurdenBand.sql" />
+    <Build Include="dbo\Tables\ReportingPatientByPractice.sql" />
+    <Build Include="dbo\Tables\ReportingPracticeByContract.sql" />
+    <Build Include="dbo\Tables\ReportingPracticeConnectionInformation.sql" />
+    <Build Include="dbo\Tables\ReportingRaphsSummary.sql" />
+    <Build Include="dbo\Tables\Reporting_Enrolment.sql" />
+    <Build Include="dbo\Tables\Reporting_Quarter.sql" />
+    <Build Include="dbo\Tables\rpt_Childhood_IMMS.sql" />
+    <Build Include="dbo\Tables\rpt_Childhood_Imms_24M_Qtr4_HealthTarget.sql" />
+    <Build Include="dbo\Tables\rpt_Childhood_Imms_8M24M_HealthTarget.sql" />
+    <Build Include="dbo\Tables\rpt_IMMS_Due_Declined_Status.sql" />
+    <Build Include="dbo\Tables\rpt_IMMS_ForDemo.sql" />
+    <Build Include="dbo\Tables\RunningUnearned_NoTarget_MonthTotals.sql" />
+    <Build Include="dbo\Tables\SharepointIntensityLevels.sql" />
+    <Build Include="dbo\Tables\Stage_BCTI_Report.sql" />
+    <Build Include="dbo\Tables\Stage_CarriedFWD.sql" />
+    <Build Include="dbo\Tables\Stage_CVDRA_Performance_history.sql" />
+    <Build Include="dbo\Tables\Stage_CVDRA_Report.sql" />
+    <Build Include="dbo\Tables\Stage_CVDRA_Report_Qtr1_2017_2018.sql" />
+    <Build Include="dbo\Tables\Stage_CX.sql" />
+    <Build Include="dbo\Tables\Stage_CX_Reporting.sql" />
+    <Build Include="dbo\Tables\Stage_CX_Temp_24Mar2017_ToDelete.sql" />
+    <Build Include="dbo\Tables\Stage_Dar_Reporting.sql" />
+    <Build Include="dbo\Tables\Stage_Diab_ClinicalHistory.sql" />
+    <Build Include="dbo\Tables\Stage_ED_Frequent_Attendee.sql" />
+    <Build Include="dbo\Tables\Stage_Financial.sql" />
+    <Build Include="dbo\Tables\Stage_IMMS_24Month_Summary_temp.sql" />
+    <Build Include="dbo\Tables\Stage_IMMS_Childhood_Detail_temp.sql" />
+    <Build Include="dbo\Tables\Stage_IMMS_Childhood_DueStatus_Temp.sql" />
+    <Build Include="dbo\Tables\Stage_LINC_Reporting.sql" />
+    <Build Include="dbo\Tables\Stage_Patients_And_NES.sql" />
+    <Build Include="dbo\Tables\Stage_PreDiabetes.sql" />
+    <Build Include="dbo\Tables\Stage_Reporting_year.sql" />
+    <Build Include="dbo\Tables\Stage_Smoking_Performance_History.sql" />
+    <Build Include="dbo\Tables\Stage_Smoking_Register.sql" />
+    <Build Include="dbo\Tables\Temp_Appointment_Measurement_Report_Data.sql" />
+    <Build Include="dbo\Tables\Temp_FinancialData_PracticeReports.sql" />
+    <Build Include="dbo\Tables\Temp_FinancialPractice_Test.sql" />
+    <Build Include="dbo\Tables\Temp_Financial_Data.sql" />
+    <Build Include="dbo\Tables\Temp_HBa1Results_ByPractice_Current.sql" />
+    <Build Include="dbo\Tables\Temp_IPIFMeasures.sql" />
+    <Build Include="dbo\Tables\Temp_Stage_CVDRA_Report_20230703_Before.sql" />
+    <Build Include="dbo\Tables\Temp_Stage_CX_Reporting_20230703_Before.sql" />
+    <Build Include="dbo\Tables\Temp_Stage_DAR_Reporting_20230703_Before.sql" />
+    <Build Include="dbo\Tables\Temp_Stage_LINC_Reporting_20230703_Before.sql" />
+    <Build Include="dbo\Tables\Temp_Stage_Smoking_Register_20230703_Before.sql" />
+    <Build Include="dbo\Views\CVD_Performance_vw.sql" />
+    <Build Include="dbo\Views\CX_Performance_Temp_24_Mar_2017.sql" />
+    <Build Include="dbo\Views\CX_Performance_vw.sql" />
+    <Build Include="dbo\Views\DAR_DueOnly_vw.sql" />
+    <Build Include="dbo\Views\DAR_Performance_Temp.sql" />
+    <Build Include="dbo\Views\DAR_Performance_Temp_22_May_2017.sql" />
+    <Build Include="dbo\Views\DAR_Performance_vw.sql" />
+    <Build Include="dbo\Views\IPIF_Performance_CVD.sql" />
+    <Build Include="dbo\Views\IPIF_Performance_Smoking.sql" />
+    <Build Include="dbo\Views\LINC_Measure_Summary_vw.sql" />
+    <Build Include="dbo\Views\LINC_Performance_Temp.sql" />
+    <Build Include="dbo\Views\LINC_Performance_vw.sql" />
+    <Build Include="dbo\Views\SLM_Performance_CX.sql" />
+    <Build Include="dbo\Views\SmokingCessationRegister_vw.sql" />
+    <Build Include="dbo\Views\Smoking_Performance_vw.sql" />
+    <Build Include="Security\HEALTHNET_All Primewise Dataconnections.sql" />
+    <Build Include="Security\HEALTHNET_bstone.sql" />
+    <Build Include="Security\HEALTHNET_edenham.sql" />
+    <Build Include="Security\HEALTHNET_glord.sql" />
+    <Build Include="Security\HEALTHNET_jsherborne.sql" />
+    <Build Include="Security\HEALTHNET_kstone.sql" />
+    <Build Include="Security\HEALTHNET_mdavies.sql" />
+    <Build Include="Security\HEALTHNET_MNoel.sql" />
+    <Build Include="Security\HEALTHNET_Montage Staff.sql" />
+    <Build Include="Security\HEALTHNET_mwatson.sql" />
+    <Build Include="Security\HEALTHNET_nhoare.sql" />
+    <Build Include="Security\HEALTHNET_ntadmin.sql" />
+    <Build Include="Security\HEALTHNET_ntadmin1.sql" />
+    <Build Include="Security\HEALTHNET_nzhnrdatawarehouse.sql" />
+    <Build Include="Security\HEALTHNET_pgoodwin.sql" />
+    <Build Include="Security\HEALTHNET_phopkins.sql" />
+    <Build Include="Security\HEALTHNET_pmeyssen.sql" />
+    <Build Include="Security\HEALTHNET_PrimeWiseReporting - Analyse Data.sql" />
+    <Build Include="Security\HEALTHNET_RGPG ETL - Analyse Data.sql" />
+    <Build Include="Security\HEALTHNET_skadmin.sql" />
+    <Build Include="Security\HEALTHNET_sqljob_prod.sql" />
+    <Build Include="Security\HEALTHNET_tgadmin.sql" />
+    <Build Include="Security\HEALTHNET_tgraham.sql" />
+    <Build Include="Security\RGPGUAT_nzhnrdatawarehouse.sql" />
+    <Build Include="Security\sa_rgpgkofaxlookups.sql" />
+    <Build Include="Security\SQL_Discovery.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\FnSplit_String.sql" />
+    <Build Include="dbo\Functions\fn_SplitInt.sql" />
+    <Build Include="dbo\Stored Procedures\ApptMeasure_Reporting.sql" />
+    <Build Include="dbo\Stored Procedures\Appt_Measures_DateParameters.sql" />
+    <Build Include="dbo\Stored Procedures\CarriedFWD.sql" />
+    <Build Include="dbo\Stored Procedures\CVDRA_Performance_History.sql" />
+    <Build Include="dbo\Stored Procedures\CX_PracticePerformance_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\CX_PracticePerformance_Summary_Temp_24_Mar_2017.sql" />
+    <Build Include="dbo\Stored Procedures\CX_Register.sql" />
+    <Build Include="dbo\Stored Procedures\CX_Reporting.sql" />
+    <Build Include="dbo\Stored Procedures\CX_Reporting_Temp_Mar23_2017.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_Hba1c.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_Hba1c_Temp.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_LTCIndicator.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_LTCIndicator_temp.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_PracticePerformance_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_PracticePerformance_Summary_Temp.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_PracticePerformance_Summary_Temp_19_May_2017.sql" />
+    <Build Include="dbo\Stored Procedures\DAR_Reporting.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_Retinal_Referral.sql" />
+    <Build Include="dbo\Stored Procedures\Dar_Retinal_Referral_temp.sql" />
+    <Build Include="dbo\Stored Procedures\DIAB_Reporting_Temp.sql" />
+    <Build Include="dbo\Stored Procedures\DIAB_Reporting_Temp_May19_2017.sql" />
+    <Build Include="dbo\Stored Procedures\DIAB_Temp_rpt_EthnicityParameter.sql" />
+    <Build Include="dbo\Stored Procedures\DIAB_Temp_rpt_HbA1cParameter.sql" />
+    <Build Include="dbo\Stored Procedures\DIAB_Temp_rpt_ProviderParameter_DAR.sql" />
+    <Build Include="dbo\Stored Procedures\ED_FA_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\ED_FA_NHIs.sql" />
+    <Build Include="dbo\Stored Procedures\ED_FA_Provider.sql" />
+    <Build Include="dbo\Stored Procedures\ED_FA_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\Flu_Vac_PriorityList_65Plus_Linc.sql" />
+    <Build Include="dbo\Stored Procedures\Flu_Vac_PriorityList_65Plus_Linc_Completed.sql" />
+    <Build Include="dbo\Stored Procedures\Flu_Vac_PriorityList_65Plus_Linc_Declined.sql" />
+    <Build Include="dbo\Stored Procedures\Flu_Vac_PriorityList_65Plus_Linc_StillDue.sql" />
+    <Build Include="dbo\Stored Procedures\FundingStream_Totals.sql" />
+    <Build Include="dbo\Stored Procedures\Funding_Payments_Test.sql" />
+    <Build Include="dbo\Stored Procedures\Funding_PracticeTotal.sql" />
+    <Build Include="dbo\Stored Procedures\Funding_PracticeTotal_2_Jan2022.sql" />
+    <Build Include="dbo\Stored Procedures\Funding_PracticeTotal_2_Jan2022_Network.sql" />
+    <Build Include="dbo\Stored Procedures\Funding_PracticeTotal_Test.sql" />
+    <Build Include="dbo\Stored Procedures\Funding_Summary_proc.sql" />
+    <Build Include="dbo\Stored Procedures\Funding_Total_Test.sql" />
+    <Build Include="dbo\Stored Procedures\Last_DataRefresh_LINCAR.sql" />
+    <Build Include="dbo\Stored Procedures\LINC_EnrolmentStatus.sql" />
+    <Build Include="dbo\Stored Procedures\LINC_EnrolmentStatus_Temp.sql" />
+    <Build Include="dbo\Stored Procedures\LINC_PracticePerformance_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\LINC_PracticePerformance_Summary_Temp.sql" />
+    <Build Include="dbo\Stored Procedures\LINC_Score.sql" />
+    <Build Include="dbo\Stored Procedures\LINC_Score_Temp.sql" />
+    <Build Include="dbo\Stored Procedures\Measure_Totals.sql" />
+    <Build Include="dbo\Stored Procedures\Measure_Totals_Network.sql" />
+    <Build Include="dbo\Stored Procedures\NES_Patients_Not_Synced.sql" />
+    <Build Include="dbo\Stored Procedures\NES_Patients_Synced.sql" />
+    <Build Include="dbo\Stored Procedures\NES_Report.sql" />
+    <Build Include="dbo\Stored Procedures\POAC_DailyServiceDelivery.sql" />
+    <Build Include="dbo\Stored Procedures\POAC_DateRange.sql" />
+    <Build Include="dbo\Stored Procedures\PreDiabetes.sql" />
+    <Build Include="dbo\Stored Procedures\Report_AllocatedPatientCareIntensityLevels.sql" />
+    <Build Include="dbo\Stored Procedures\Report_CareCoordinationSummary.sql" />
+    <Build Include="dbo\Stored Procedures\Report_DiabetesBaseFunding.sql" />
+    <Build Include="dbo\Stored Procedures\Report_DiabetesRegisterSummary.sql" />
+    <Build Include="dbo\Stored Procedures\Report_DiabetesVsLTC.sql" />
+    <Build Include="dbo\Stored Procedures\Report_DiseaseBurden.sql" />
+    <Build Include="dbo\Stored Procedures\Report_DiseaseBurden_Incentive.sql" />
+    <Build Include="dbo\Stored Procedures\Report_GetAuthorisedPracticeIDs.sql" />
+    <Build Include="dbo\Stored Procedures\Report_Parameter_PracticeList.sql" />
+    <Build Include="dbo\Stored Procedures\Report_Parameter_PracticeList_Network.sql" />
+    <Build Include="dbo\Stored Procedures\RMC_CVDRisk_Update.sql" />
+    <Build Include="dbo\Stored Procedures\RMC_CX_Update.sql" />
+    <Build Include="dbo\Stored Procedures\RMC_HBa1c_Result_Update.sql" />
+    <Build Include="dbo\Stored Procedures\RMC_Indic_CVDRA_Update.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_BCTI.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_BP_TCHDL.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_CMIParameter_CX.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_CVDRiskBand_Parameter.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_CVRDRARegister.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_DIABClinicalHistory.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_DiabetesRegister.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_DiabetesRegister_Enrolment_Sub.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_DiabetesRegister_LINC_Sub.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_DiabetesRegister_Sub.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Diabetes_Financial_Contracts.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EnrolmentRegister_Retired.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EnrolmentReport.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EnrolmentStatus_Parameter.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter_ApptMeasure.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter_CVDRA.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter_CX.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter_DAR.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter_LINC.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter_PreDiabetes.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_EthnicityParameter_Smoking.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Financial.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Financial_CarriedFWD.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Financial_PracticeDALY.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_HbA1cParameter.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24Month_CurrentPerformance.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24M_Q4_Equity.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24M_Q4_Equity_Practice.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24M_Q4_PracticeCompare.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24M_Q4_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_8M_24M_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_8M_24M_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_Childhood_Detail_proc.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_Childhood_ScheduledStatus.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_First6Week.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_NHI_Lookup.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_SLM_24M_Q4_Detail.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_LINCAR_DateParameters.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_LincIntensityParameter.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_LINCRegister.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_LINC_ExpiredBefore_QtrStart.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_LINC_Reporting.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_MoreHeartandDiabetes.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_MoreHeartandDiabetes_Network.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_MoreHeartandDiabetes_PracticePerformance_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_MoreHeartandDiabetes_PracticePerformance_Summary_Network.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Network_CVRDRARegister.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Network_DiabetesRegister.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Network_LINCRegister.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Network_patientOverview.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Palliative_Care.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_PatientDetail_CVDRA_Smoking.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_patientOverview.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_patientOverview_LINC.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_POAC_MonthlyServiceDelivery.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_POAC_MonthlyServiceDelivery_LPC.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_POAC_ProcessStatus.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_POAC_ProcessStatus_LPC.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_POAC_ServiceDelivery.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_POAC_ServiceDelivery_Network.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_PreDiabetes.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Prediabetes_Count.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameterEnrolledOnly.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameterEnrolledOrCapitated.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_ApptMeasure.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_CVD.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_CX.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_DAR.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_Flu.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_LINC.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_Prediabetes.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ProviderParameter_Smoking.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Smokers_NotSeen.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_SmokingRegister.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_SmokingRegister_MissedOpportunity.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_SmokingRegister_MissedOpportunity_New_Jun23_2017.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_SmokingRegister_MissedOpportunity_WHHC_Test.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_SmokingRegister_New_Jun_2017.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_SmokingRegister_NP.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_Smoking_PracticePerformance_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_TempFinancial_Practice.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_UnearnedFunding.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_UnearnedFunding_Network.sql" />
+    <Build Include="dbo\Stored Procedures\Ruatahi_CVDRA_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Ruatahi_CX_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Ruatahi_DAR_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Ruatahi_Insert_Stage_DAR_Reporting.sql" />
+    <Build Include="dbo\Stored Procedures\Ruatahi_LINC_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Ruatahi_Smoking_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Ruatahi_Update_Stage_DAR_Reporting.sql" />
+    <Build Include="dbo\Stored Procedures\SharepointList_Patients.sql" />
+    <Build Include="dbo\Stored Procedures\Smoking_Performance_History.sql" />
+    <Build Include="dbo\Stored Procedures\Temp_ApptMeasure_Reporting.sql" />
+    <Build Include="dbo\Stored Procedures\Temp_rpt_EthnicityParameter_ApptMeasure.sql" />
+    <Build Include="dbo\Stored Procedures\Temp_rpt_MondayOfWeek_ApptMeasure.sql" />
+    <Build Include="dbo\Stored Procedures\Temp_rpt_ProviderParameter_ApptMeasure.sql" />
+    <Build Include="dbo\Stored Procedures\UnearnedFunding_Jul2019_Feb2020.sql" />
+    <Build Include="dbo\Stored Procedures\UnearnedFunding_Jul2019_Mar2020.sql" />
+    <Build Include="dbo\Stored Procedures\Update_KAHC_CVDRA.sql" />
+    <Build Include="dbo\Stored Procedures\Update_KAHC_DAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_KAHC_LINCAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_KAHC_SmokingCessation.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TIMC_CVDRA.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TIMC_DAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TIMC_LINCAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TIMC_SmokingCessation.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TMC_CVDRA.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TMC_DAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TMC_LINCAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_TMC_SmokingCessation.sql" />
+    <Build Include="dbo\Stored Procedures\Update_WHHC_CVDRA.sql" />
+    <Build Include="dbo\Stored Procedures\Update_WHHC_DAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_WHHC_LINCAR.sql" />
+    <Build Include="dbo\Stored Procedures\Update_WHHC_SmokingCessation.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+  </ItemGroup>
+</Project>

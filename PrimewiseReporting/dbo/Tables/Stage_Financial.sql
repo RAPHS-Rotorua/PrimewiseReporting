@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[Stage_Financial](
+	[MeasureGroup] [varchar](100) NULL,
+	[MeasureGroup_OrderBy] [tinyint] NULL,
+	[MeasureFriendlyDescription] [varchar](100) NULL,
+	[MaintenanceTarget] [decimal](3, 2) NULL,
+	[IncentiveTarget] [decimal](3, 2) NULL,
+	[Performance] [decimal](3, 2) NULL,
+	[MaintenanceQuarterlyMax] [decimal](38, 5) NULL,
+	[IncentiveQuarterlyMax] [decimal](38, 5) NULL,
+	[QuarterlyMaxTotal] [decimal](38, 5) NULL,
+	[PracticeID] [int] NULL,
+	[Practice] [varchar](100) NULL,
+	[PracticeDALY] [decimal](16, 14) NULL,
+	[Date_Year] [smallint] NULL,
+	[Financial_Year] [smallint] NULL,
+	[Month1_of_Qtr] [varchar](30) NULL,
+	[Month2_of_Qtr] [varchar](30) NULL,
+	[Month3_of_Qtr] [varchar](30) NULL,
+	[Qtr_DateRange] [varchar](32) NULL,
+	[Quarter_No] [tinyint] NULL,
+	[MeasureCode] [varchar](20) NULL,
+	[ActualQuarterTotal] [decimal](38, 5) NULL,
+	[Month_1_Of_Qtr_ActualTotal] [decimal](38, 2) NULL,
+	[Month_2_Of_Qtr_ActualTotal] [decimal](38, 2) NULL,
+	[Month_3_Of_Qtr_ActualTotal] [decimal](38, 2) NULL,
+	[Month_1_Complete] [int] NULL,
+	[Month_2_Complete] [int] NULL,
+	[Month_3_Complete] [bit] NULL,
+	[Quarter_CarryFwd] [decimal](38, 2) NULL,
+	[DateStamp] [datetime] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Stage_Financial] ADD  DEFAULT (getdate()) FOR [DateStamp]

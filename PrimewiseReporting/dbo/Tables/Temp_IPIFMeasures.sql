@@ -1,0 +1,19 @@
+﻿CREATE TABLE [dbo].[Temp_IPIFMeasures](
+	[PracticeID] [int] NULL,
+	[Practice] [varchar](50) NULL,
+	[NHI] [varchar](50) NULL,
+	[DOB] [date] NULL,
+	[Age_QtrStart] [int] NULL,
+	[Age_QtrEnd] [int] NULL,
+	[Ethnicity] [varchar](50) NULL,
+	[Gender] [varchar](50) NULL,
+	[Quintile] [int] NULL,
+	[CVD_Denominator] [varchar](3) NULL,
+	[CVD_Numerator] [varchar](3) NULL,
+	[Smoking_Denominator] [varchar](3) NULL,
+	[Smoking_Numerator] [varchar](3) NULL,
+	[CX_AgeBand] [varchar](12) NULL,
+	[CX_Denominator] [varchar](8) NULL,
+	[CX_Numerator] [varchar](3) NULL,
+	[CX_Denominator_Adjustor] [decimal](5, 3) NULL
+) ON [PRIMARY]

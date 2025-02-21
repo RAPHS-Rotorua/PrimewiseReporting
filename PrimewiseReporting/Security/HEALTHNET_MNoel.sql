@@ -1,0 +1,2 @@
+﻿/****** Object:  User [HEALTHNET\MNoel]    Script Date: 21/02/2025 12:41:52 pm ******/
+CREATE USER [HEALTHNET\MNoel] FOR LOGIN [HEALTHNET\MNoel] WITH DEFAULT_SCHEMA=[dbo]

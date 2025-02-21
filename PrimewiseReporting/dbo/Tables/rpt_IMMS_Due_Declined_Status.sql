@@ -1,0 +1,23 @@
+﻿CREATE TABLE [dbo].[rpt_IMMS_Due_Declined_Status](
+	[PracticeID] [int] NULL,
+	[Practice] [varchar](100) NULL,
+	[NHI] [varchar](255) NULL,
+	[Full_Name] [varchar](511) NOT NULL,
+	[Ethnicity] [varchar](255) NULL,
+	[Quintile] [int] NULL,
+	[Child_Age] [varchar](11) NULL,
+	[Eligibility_Age] [datetime] NULL,
+	[Gender] [varchar](255) NULL,
+	[Phone] [varchar](50) NULL,
+	[Due_Group] [varchar](17) NOT NULL,
+	[Due_Group_Truncated] [varchar](8000) NULL,
+	[Due_Group_Sort] [int] NOT NULL,
+	[Decline_Status] [varchar](18) NULL,
+	[NoRows_Completed] [int] NULL,
+	[NoRows_Declined] [int] NULL,
+	[Vaccines_Declined] [varchar](154) NULL,
+	[Vaccines_Completed] [varchar](154) NULL,
+	[TotalChildren] [int] NOT NULL,
+	[FullyDeclined] [int] NOT NULL,
+	[PartiallyDeclined] [int] NOT NULL
+) ON [PRIMARY]

@@ -1,0 +1,21 @@
+﻿CREATE TABLE [dbo].[Stage_PreDiabetes](
+	[Practice] [varchar](100) NULL,
+	[NHI] [varchar](50) NULL,
+	[Patient] [varchar](101) NULL,
+	[DOB] [datetime] NULL,
+	[Ethnicity] [varchar](50) NULL,
+	[Quintile] [int] NULL,
+	[CellPhone] [varchar](50) NULL,
+	[HomePhone] [varchar](50) NULL,
+	[EnrolledInPMS] [varchar](50) NULL,
+	[DiabetesIndicator] [bit] NULL,
+	[Funding] [varchar](50) NULL,
+	[LTCEnrolmentIndicator] [bit] NULL,
+	[Age_QtrEnd] [int] NULL,
+	[HBa1c] [decimal](6, 2) NULL,
+	[AlbCreatRatio] [varchar](500) NULL,
+	[ProvCode] [varchar](50) NULL,
+	[PracticeID] [int] NULL,
+	[HbA1c_Date] [datetime] NULL,
+	[AlbCreat_Date] [datetime] NULL
+) ON [PRIMARY]

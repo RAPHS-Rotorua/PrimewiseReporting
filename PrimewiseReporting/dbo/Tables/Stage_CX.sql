@@ -1,0 +1,32 @@
+﻿CREATE TABLE [dbo].[Stage_CX](
+	[PracticeID] [int] NULL,
+	[Practice] [varchar](50) NULL,
+	[NHI] [varchar](50) NULL,
+	[eth1] [varchar](50) NULL,
+	[Ethnicity] [varchar](50) NULL,
+	[DOB] [date] NULL,
+	[PatientName] [varchar](101) NULL,
+	[ProviderCode] [varchar](50) NULL,
+	[CellPhone] [varchar](50) NULL,
+	[HomePhone] [varchar](50) NULL,
+	[Age_Qtr_End] [int] NULL,
+	[AgeBand] [varchar](12) NULL,
+	[Last_Screen] [datetime] NULL,
+	[Never_Screened] [bit] NULL,
+	[Greater_Than_5_Years] [bit] NULL,
+	[Greater_Than_3_Years] [bit] NULL,
+	[Programme_Goal] [decimal](5, 2) NULL,
+	[CX_Numerator] [bit] NULL,
+	[Denominator] [bit] NULL,
+	[Mamm_Due] [bit] NULL,
+	[CX_Status] [varchar](14) NULL,
+	[Complete_Status] [varchar](8) NULL,
+	[CMI] [nvarchar](255) NULL,
+	[LOCATION_OF_LAST_SCREEN] [nvarchar](255) NULL,
+	[ReportingQuarter] [tinyint] NULL,
+	[PriorityGroup] [bit] NULL,
+	[CX_Denominator_Adjustor] [decimal](5, 3) NULL,
+	[DateStamp] [datetime] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Stage_CX] ADD  CONSTRAINT [DF_Stage_CX_DateStamp]  DEFAULT (getdate()) FOR [DateStamp]
