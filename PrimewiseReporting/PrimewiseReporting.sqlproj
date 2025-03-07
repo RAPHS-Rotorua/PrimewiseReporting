@@ -372,5 +372,12 @@
     <Build Include="dbo\Stored Procedures\Update_WHHC_LINCAR.sql" />
     <Build Include="dbo\Stored Procedures\Update_WHHC_SmokingCessation.sql" />
     <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_ChildhoodScheduledStatusRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24MonthQtr4CurrentPerformanceRAPHS.sql" />
+    <Build Include="dbo\Tables\IMMS_24MonthQtr4SummaryRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_8M24MSummaryRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24MQ4SummaryRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_24MQ4EquityRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_ChildhoodDetailRAPHS_proc.sql" />
   </ItemGroup>
 </Project>
