@@ -379,5 +379,9 @@
     <Build Include="dbo\Stored Procedures\rpt_IMMS_24MQ4SummaryRAPHS.sql" />
     <Build Include="dbo\Stored Procedures\rpt_IMMS_24MQ4EquityRAPHS.sql" />
     <Build Include="dbo\Stored Procedures\rpt_IMMS_ChildhoodDetailRAPHS_proc.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_8M24MDetailRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_NHILookupRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_SLM24MQ4DetailRAPHS.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_IMMS_First6WeekRAPHS.sql" />
   </ItemGroup>
 </Project>

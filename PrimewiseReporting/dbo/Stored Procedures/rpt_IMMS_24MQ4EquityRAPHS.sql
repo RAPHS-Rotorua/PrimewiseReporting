@@ -20,7 +20,7 @@ CREATE DATE:				7 Mar 2025
 SET ARITHABORT OFF;  --need this otherwise divide by zero fails report.  If this is off divide by zero defaults to null
 SET ANSI_WARNINGS OFF; --Don't want any warnings displayed
 
-Select  
+Select  'RAPHS Network' as Cohort,
 Cast((Select cast(Sum(Numerator) as decimal(10,2))/cast(Sum(Denominator) as decimal(10,2))
 from (Select 
 distinct
