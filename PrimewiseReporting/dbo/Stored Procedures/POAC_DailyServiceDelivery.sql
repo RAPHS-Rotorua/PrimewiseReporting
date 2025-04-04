@@ -20,6 +20,7 @@ AS
 	SELECT s.PracticeID
 		 , p.SurgeryName AS Practice
 		 , s.NHI
+		 , s.Provider_Code  --js added 4/4/2025 as need to add to report
 		 , s.Firstname + ' ' + s.LastName AS PatientName
 		 , s.Code
 		 , s.ServiceDescription
