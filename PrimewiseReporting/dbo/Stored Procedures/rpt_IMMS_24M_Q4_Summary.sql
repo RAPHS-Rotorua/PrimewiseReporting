@@ -31,7 +31,8 @@ AS
 			 , SUM(Numerator) AS Completed
 			 , CAST(SUM(Numerator) AS DECIMAL(10, 2)) / CAST(SUM(Denominator) AS DECIMAL(10, 2)) AS performance
 			 , 0.72 AS Target  --on 2025-3-3: JS altered to reflect new target (was 0.682 prior to this)
-			 , CEILING((0.72 * CAST(SUM(Denominator) AS DECIMAL(10, 2))) - CAST(SUM(Numerator) AS DECIMAL(10, 2))) AS Gap --on 2025-3-3: JS altered to reflect new target (was 0.682 prior to this)
+			 , (Select CEILING((0.72 * CAST(SUM(SLM_Age_24_Months_Qtr4) AS DECIMAL(10, 2))) - CAST(SUM(Numerator_24_Months_Qtr4) AS DECIMAL(10, 2)))
+			 from (Select distinct NHI, SLM_Age_24_Months_Qtr4, Numerator_24_Months_Qtr4 from IMMS_Childhood_Detail where SLM_Age_24_Months_Qtr4 = 1) as z) AS Gap --on 2025-3-3: JS altered to reflect new target (was 0.682 prior to this)
 			 , 1 AS orderby
 		FROM (
 			SELECT
